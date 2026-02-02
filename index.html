@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kyou's Birthday ♡</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- BACKGROUND MUSIC -->
+<audio id="bgm" autoplay muted loop>
+  <source src="same-dream-instrumental.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- FLOATING BACKGROUND -->
+<div class="floating-bg">
+  <span>♡</span><span>✧</span><span>✿</span><span>❀</span>
+  <span>❁</span><span>ꕥ</span><span>𓆸</span><span>♡</span>
+</div>
+
+<!-- RECORD PLAYER -->
+<div class="player" onclick="toggleMusic()">
+  <div class="record" id="record"></div>
+  <div class="btn" id="musicBtn">⏸</div>
+</div>
+
+<div class="container">
+
+  <!-- PAGE 1 -->
+  <section class="page">
+    <div class="content">
+      <h1>Happy Birthday My Love!</h1>
+      <p class="date">✿ February 3 ✿</p>
+
+      <div class="photo big confetti-trigger">
+        <img src="kyou1.jpg">
+      </div>
+
+      <p class="level">✧ Level 18 Unlocked ✧</p>
+      <div class="arrow">↓</div>
+    </div>
+  </section>
+
+  <!-- PAGE 2 -->
+  <section class="page">
+    <div class="content">
+      <div class="photo medium confetti-trigger">
+        <img src="kyou2.jpg">
+      </div>
+
+      <p class="big-text">
+        You are officially eighteen ♡<br><br>
+        A year of growth, courage,<br>
+        and gentle dreams ✧<br><br>
+        I hope you feel loved,<br>
+        always.
+      </p>
+
+      <div class="arrow">↓</div>
+    </div>
+  </section>
+
+  <!-- PAGE 3 FLOWER -->
+  <section class="page">
+    <div class="content">
+      <div class="photo medium confetti-trigger">
+        <img src="kyou3.jpg">
+      </div>
+
+      <h2>✿ Click the Flower ✿</h2>
+      <div class="flower" onclick="flowerClick()">𓆸</div>
+      <p id="flowerText" class="game-text">touch the flower ♡</p>
+
+      <div class="arrow">↓</div>
+    </div>
+  </section>
+
+  <!-- PAGE 4 CAKE -->
+  <section class="page">
+    <div class="content">
+      <div class="photo medium confetti-trigger">
+        <img src="kyou4.jpg">
+      </div>
+
+      <h2>🎂 Make a Wish 🎂</h2>
+
+      <div class="cake" onclick="blowCandle()">
+        <div class="candle">
+          <div class="flame" id="flame"></div>
+        </div>
+        <div class="cake-body"></div>
+      </div>
+
+      <p id="cakeText" class="game-text">click the candle ♡</p>
+      <div class="arrow">↓</div>
+    </div>
+  </section>
+
+  <!-- PAGE 5 CARD -->
+  <section class="page">
+    <div class="content">
+      <div class="photo medium confetti-trigger">
+        <img src="kyou5.jpg">
+      </div>
+
+      <h2>✧ Birthday Wishes ✧</h2>
+
+      <div class="card-stack" onclick="shuffleCard()">
+        <div class="card" id="cardText">tap for a wish ♡</div>
+      </div>
+
+      <p class="hint">✿ tap again ✿</p>
+      <div class="arrow">↓</div>
+    </div>
+  </section>
+
+  <!-- PAGE 6 FINAL -->
+  <section class="page">
+    <div class="content">
+      <div class="photo big confetti-trigger">
+        <img src="kyou6.jpg">
+      </div>
+
+      <p class="big-text">
+        I’m grateful you were born ♡<br><br>
+        You make the world softer ✧<br><br>
+        <strong>I love you, Kyou.</strong>
+      </p>
+
+      <footer>ꕥ made with love ꕥ</footer>
+    </div>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

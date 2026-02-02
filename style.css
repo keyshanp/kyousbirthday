@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  background: linear-gradient(180deg, #ffe4f2, #e9f6ff);
+  overflow: hidden;
+  color: #444;
+}
+
+/* FLOATING EMOJI */
+.floating-bg span {
+  position: fixed;
+  bottom: -40px;
+  font-size: 26px;
+  animation: float 14s linear infinite;
+  opacity: 0.25;
+}
+
+.floating-bg span:nth-child(1) { left: 10%; }
+.floating-bg span:nth-child(2) { left: 25%; animation-delay: 3s; }
+.floating-bg span:nth-child(3) { left: 40%; animation-delay: 6s; }
+.floating-bg span:nth-child(4) { left: 55%; animation-delay: 1s; }
+.floating-bg span:nth-child(5) { left: 70%; animation-delay: 4s; }
+.floating-bg span:nth-child(6) { left: 85%; animation-delay: 7s; }
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(-120vh); }
+}
+
+/* SCROLL */
+.container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.page {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CONTENT */
+.content {
+  text-align: center;
+  padding: 40px;
+  max-width: 900px;
+}
+
+/* TEXT */
+h1 { font-size: 30px; margin-bottom: 15px; }
+h2 { font-size: 22px; margin-bottom: 20px; }
+p  { font-size: 17px; line-height: 2; }
+
+.big-text { font-size: 19px; }
+
+.date, .level {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* PHOTO */
+.photo {
+  border-radius: 50%;
+  border: 5px solid #ffb6d9;
+  overflow: hidden;
+  margin: 25px auto;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo.big { width: 210px; height: 210px; }
+.photo.medium { width: 160px; height: 160px; }
+
+/* ARROW */
+.arrow {
+  margin-top: 25px;
+  font-size: 22px;
+  opacity: 0.5;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  50% { transform: translateY(10px); }
+}
+
+/* FLOWER */
+.flower {
+  font-size: 64px;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  50% { transform: scale(1.2); }
+}
+
+.game-text {
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+/* CAKE */
+.cake {
+  margin: 30px auto;
+  cursor: pointer;
+}
+
+.cake-body {
+  width: 140px;
+  height: 80px;
+  background: #ffb6d9;
+  border-radius: 0 0 20px 20px;
+  margin: auto;
+}
+
+.candle {
+  width: 14px;
+  height: 40px;
+  background: #fff;
+  margin: auto;
+  position: relative;
+}
+
+.flame {
+  width: 14px;
+  height: 20px;
+  background: orange;
+  border-radius: 50%;
+  position: absolute;
+  top: -18px;
+  animation: flicker 1s infinite;
+}
+
+@keyframes flicker {
+  50% { transform: scale(0.8); }
+}
+
+/* CARD */
+.card-stack {
+  width: 320px;
+  height: 190px;
+  margin: 30px auto;
+  cursor: pointer;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #fff0f7, #ffe6f2);
+  border-radius: 26px;
+  border: 4px solid #ff9fc9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  font-size: 15px;
+  box-shadow: 0 12px 30px rgba(255,159,201,0.4);
+  transition: transform 0.4s;
+}
+
+.card:hover {
+  transform: rotate(-2deg) scale(1.04);
+}
+
+.hint {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 25px;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+/* MUSIC PLAYER */
+.player {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.record {
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle, #000 35%, #444 36%, #000 70%);
+  border-radius: 50%;
+  animation: spin 4s linear infinite;
+}
+
+.paused {
+  animation-play-state: paused;
+}
+
+.btn {
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
